@@ -7,7 +7,7 @@
 后台地址：http://localhost:8888/admin/login  账号：admin  密码：123456
 
 
-前台：http://localhost:8888/
+前台地址：http://localhost:8888/
 
 
 
