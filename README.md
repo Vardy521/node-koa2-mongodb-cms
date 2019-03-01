@@ -1,5 +1,5 @@
 # node-koa2-mongodb-cms
-个人CMS demo
+个人CMS内容管理系统 demo
 
 技术栈：node.js+koa2+mongodb
 
