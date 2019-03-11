@@ -25,4 +25,4 @@
 	font-size: 12px;
 }
 
-.main li img{ display:block; width:360px; height:256px;}
+.main li img{ display:block; width:360px; height:256px;border:1px solid #ccc;}

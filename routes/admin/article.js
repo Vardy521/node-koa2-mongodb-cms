@@ -90,7 +90,7 @@ router.get('/edit',async (ctx)=>{
     }
 });
 router.post('/doEdit',myupload.single('pic'),async (ctx)=>{
-    let prevPage=ctx.req.body.prevPage || '';  /*上一页的地址*/
+     let prevPage=ctx.req.body.prevPage || '';  /*上一页的地址*/
     let id=ctx.req.body.id;
     let pid=ctx.req.body.pid;
     let catename=ctx.req.body.catename.trim();

@@ -56,18 +56,23 @@ router.get('/news',async (ctx)=>{
     //获取新闻分类下的子分类
     var cateResult=await DB.find('articlecate',{'pid':'5c6e0922c0fef02aa8371e31'});
 
-    ctx.state.setting.sitetitle=cateResult[0].title;
+    // ctx.state.setting.sitetitle=cateResult[0].title;
     ctx.state.setting.keyword=cateResult[0].keywords;
     ctx.state.setting.description=cateResult[0].description;
 
     // console.log(cateResult);
     if(pid){
+        var cateDResult=await DB.find('articlecate',{'_id':DB.getObjectId(pid)});
+        ctx.state.setting.sitetitle=cateDResult[0].title;
+        // console.log(cateDResult);
         var newsLIst=await DB.findPage('article',{'pid':pid},{},{
             page,
             pageSize
         });
         var articleNum=await DB.count('article',{'pid':pid});
     }else{
+        ctx.state.setting.sitetitle='新闻资讯';
+        // console.log(ctx.state.setting.sitetitle);
         var subCaseArr=[];
         for(var i=0;i<cateResult.length;i++){
             subCaseArr.push(cateResult[i]._id.toString());
@@ -92,9 +97,9 @@ router.get('/service',async (ctx)=>{
     var serviceResult=await DB.find('article',{'pid':'5c6e0a7ec0fef02aa8371e34'});
 
     //要在渲染页面之前设置标题、关键字、描述
-    ctx.state.setting.sitetitle='我的cms-服务';
-    ctx.state.setting.keyword='服务关键管教管教';
-    ctx.state.setting.description='服务描述描述描述描述';
+    ctx.state.setting.sitetitle='个人网站-服务';
+    ctx.state.setting.keyword='个人、网站、展示、官网、Node.js、MongoDB、服务、服务内容';
+    ctx.state.setting.description='服务内容简单描述';
     // console.log(serviceResult);
     ctx.render('web/service',{
         serviceList:serviceResult

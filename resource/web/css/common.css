@@ -2,8 +2,7 @@
 /* CSS Document */
 #header-wrapper{height:103px; background:#fff;}
 #header-wrapper .header-inner{width:1140px; height:103px; margin:0 auto; background:#fff; overflow:hidden;}
-.header-inner .logo{width:398px;height:56px;float:left;
-margin-top:24px;}
+.header-inner .logo{width:398px;height:56px;float:left;}
 .header-inner .logo a{display:block;width:398px;height:56px;text-indent:-9999px;}
 .header-inner .nav{float:right; margin-top:31px;}
 .header-inner .nav ul li{float:left;}
@@ -17,10 +16,12 @@ margin-top:24px;}
 }
 
 /* 网页底部 */
-#footer-wrapper{height:138px;background:#363636;}
-#footer-wrapper .footer-inner{width:1140px;height:118px;background:#363636; margin:0 auto; padding-top:20px;}
-.footer-inner p{color:#727272; text-align:center;line-height:30px;}
+#footer-wrapper{background:#eee;}
+#footer-wrapper .footer-inner{width:1140px;background:#eee; margin:0 auto;padding:20px 0;}
+.footer-inner p{color:#727272; text-align:center;line-height:30px !important;}
 .footer-inner p a{color:#727272;}
+div.main{min-height:518px;}
+p{margin:0 !important;}
 
 
 
